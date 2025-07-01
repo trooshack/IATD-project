@@ -1,11 +1,10 @@
-name: 1-st CI
+name: CI/CD Pipeline
+
 on:
   push:
     branches: [main]
   pull_request:
-    branches: [main]
-
-jobs:
+    branches: [main]jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
@@ -14,11 +13,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Setup Node.js
-      uses: actions/setup-nodev3
-      with:
-        node-version: ${{matrix.node-version}}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
       - run: npm install
       - run: npm test
+
 
 
 
