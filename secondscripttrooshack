@@ -1,0 +1,6 @@
+const answer = readlineSync.question('Tell me about yourself...')
+if (answer).length > 10 {
+    console.log('Wow, you love talking about yourself!')
+ }
+ else {console.log ('Nice and concise!')}
+ 
