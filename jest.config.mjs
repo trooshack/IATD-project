@@ -195,4 +195,8 @@ const config = {
   // watchman: true,
 };
 
-export default config;
+export default {
+  transform: {}, // Disable transpilation for ESM
+  extensionsToTreatAsEsm: ['.js', '.jsx', '.ts', '.tsx'],
+  testEnvironment: 'node'
+}
